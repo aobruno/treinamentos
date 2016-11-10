@@ -79,7 +79,45 @@
                 </section>
 
                 <section>
-                    <h2>Bom, outras pessoas já passaram por isso...</h2>
+                    <h2>Configuração de usuário</h2>
+                    <section>
+                        <code>git config user.name “Nome do Usuário”</code>
+                        <p>Define o nome do usuário que será utilizado nos commits do repositório ativo</p>
+                    </section>
+                    <section>
+                        <code>git config user.email usuario@email.com</code>
+                        <p>Define o email do usuário que será utilizado nos commits do repositório ativo</p>
+                    </section>
+                    <section>
+                        <p>OBS: Para definir o mesmo nome e email de usuário para todos os respositórios utilize o parâmetro --global</p>
+                        <p><code>git config --global user.name “Nome do Usuário”</code></p>
+                        <code>git config --global user.email usuario@email.com</code>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Fluxo básico</h2>
+                    <img src="img/work-flow.png" height="500px" alt="fluxo de trabalho no git">
+                    <section>
+                        <h3>Diretório de trabalho (working directory)</h3>
+                        <p>Snapshot dos arquivos atuais</p>
+                        <p>Identifica os arquivos incluídos, modificados ou excluídos</p>
+                    </section>
+                    <section>
+                        <h3>Área de preparação (staging area)</h3>
+                        <p>Armazena as alterações realizadas</p>
+                        <p>Prepara os arquivos para serem commitados</p>
+                    </section>
+                    <section>
+                        <h3>Repositório local (local repository)</h3>
+                        <p>Versão local do último commit</p>
+                        <p>Gravação das alterações armazenadas na máquina local</p>
+                    </section>
+                    <section>
+                        <h3>Repositório remoto (remote repository)</h3>
+                        <p>Versão remota dos repositórios locais</p>
+                        <p>Compartilhado com os membros do projeto</p>
+                    </section>
                 </section>
 
                 <section data-background="#007777">
