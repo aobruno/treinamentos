@@ -139,20 +139,86 @@
                         <p>Salva tudo</p>
                     </section>
                     <section>
-                        <h4>Staging area => local repository</h4>
+                        <h4>Staging area => Local repository</h4>
                         <code>git commit</code>
                         <p>Cria uma versão do trabalho com as alterações salvas na área de praparação</p>
                         <p>Gera uma hash para referenciar a head do repositório</p>
-                        <p>Possui cabeçalho e corpo</p>
+                        <p>Possui cabeçalho para resumir o que foi feito em até 50 caracteres, e corpo para dar mais detalhes sobre o que foi citado no cabeçalho</p>
+                    </section>
+                    <section style="position: relative;">
+                        <img src="img/commit.png" alt="tela de commit">
+                    </section>
+                    <section>
+                        <h4>Staging area => Local repository</h4>
+                        <code>git commit -m "Cabecalho do commit"</code>
+                        <p>Permite criar um commit sem abrir o prompt, digitando somente o cabeçalho na mesma linha</p>
+                        <code>git commit -a</code>
+                        <p>Salva automaticamente os arquivos alterados e deletados, mas não os adicionados</p>
+                    </section>
+                    <section>
+                        <h4>Local repository => Remote repository</h4>
+                        <code>git push</code>
+                        <p>Envia os commits da branch local ativa para a branch remota padrão definida</p>
+                    </section>
+                    <section>
+                        <h4>Local repository => Remote repository</h4>
+                        <code>git push <i>repository</i> <i>branch</i></code>
+                        <p>Envia os commits da branch local ativa para a branch remota especificada</p>
+                    </section>
+                    <section>
+                        <h4>Local repository => Remote repository</h4>
+                        <i>repository</i>
+                        <br><br>
+                        <li>Nome do repositório remoto definido.<br>Ex: <code>git push origin <i>branch</i></code></li>
+                        <br>
+                        <li>Caminho do repositório remoto definido.<br>Ex: <code>git push <i>http://caminhodorepositorio.git</i> <i>branch</i></code></li>
+                    </section>
+                    <section>
+                        <h4>Remote repository => Local repository</h4>
+                        <code>git fetch</code>
+                        <p>Baixa os commits da branch remota padrão para a branch local ativa</p>
+                    </section>
+                    <section>
+                        <h4>Remote repository => Local repository</h4>
+                        <code>git pull</code>
+                        <p>Baixa os commits da branch remota padrão para a branch local ativa</p>
+                        <code>git pull <i>repository</i> <i>branch</i></code>
+                        <p>Baixa os commits da branch remota especificada para a branch local ativa</p>
                     </section>
                 </section>
 
-                <section data-background="#007777">
-                    <img src="img/linus.jpg" height="366" width="366" alt="linus">
-                    <div class="fragment">
-                        <h2>Linus Torvalds</h2>
-                        <p>Um dos criadores do linux</p>
-                    </div>
+                <section>
+                    <h2>Comandos auxiliares</h2>
+                    <section>
+                        <code>git status</code>
+                        <p>Mostra o estado atual dos arquivos da branch, e a situação da branch local em relação à remota</p>
+                        <br>
+                        <code>git branch</code>
+                        <p>Lista as branches existentes no repositório remoto</p>
+                        <br>
+                        <code>git branch <i>nomeDaBranch</i></code>
+                        <p>Cria uma nova branch local</p>
+                    </section>
+                    <section>
+                        <code>git checkout <i>nomeDaBranch</i></code>
+                        <p>Muda a branch ativa</p>
+                        <br>
+                        <code>git checkout -b <i>nomeDaBranch</i></code>
+                        <p>Cria uma nova branch local e faz dela a branch ativa automaticamente</p>
+                        <br>
+                        <code>git merge <i>nomeDaBranch</i></code>
+                        <p>Mescla a branch referida na branch ativa</p>
+                    </section>
+                    <section>
+                        <code>git branch -d <i>nomeDaBranch</i></code>
+                        <p>Deleta a branch referida</p>
+                        <br>
+                        <code>git reset</code>
+                        <p>Desfaz o último commit da branch e retorna as alterações para o estado de não salvas. Pode ser usado o índice do array de commits ou a hash de um commit específico como referência</p>
+                        <br>
+                        <code>git commit --amend</code>
+                        <p>Permite alterar informações do último commit</p>
+                    </section>
                 </section>
 
                 <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
