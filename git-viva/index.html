@@ -97,26 +97,53 @@
 
                 <section>
                     <h2>Fluxo básico</h2>
-                    <img src="img/work-flow.png" height="500px" alt="fluxo de trabalho no git">
                     <section>
                         <h3>Diretório de trabalho (working directory)</h3>
-                        <p>Snapshot dos arquivos atuais</p>
-                        <p>Identifica os arquivos incluídos, modificados ou excluídos</p>
+                        <p class="fragment">Snapshot dos arquivos atuais</p>
+                        <p class="fragment">Identifica os arquivos incluídos, modificados ou excluídos</p>
                     </section>
                     <section>
                         <h3>Área de preparação (staging area)</h3>
-                        <p>Armazena as alterações realizadas</p>
-                        <p>Prepara os arquivos para serem commitados</p>
+                        <p class="fragment">Armazena as alterações realizadas</p>
+                        <p class="fragment">Prepara os arquivos para serem commitados</p>
                     </section>
                     <section>
                         <h3>Repositório local (local repository)</h3>
-                        <p>Versão local do último commit</p>
-                        <p>Gravação das alterações armazenadas na máquina local</p>
+                        <p class="fragment">Versão local do último commit</p>
+                        <p class="fragment">Gravação das alterações armazenadas na máquina local</p>
                     </section>
                     <section>
                         <h3>Repositório remoto (remote repository)</h3>
-                        <p>Versão remota dos repositórios locais</p>
-                        <p>Compartilhado com os membros do projeto</p>
+                        <p class="fragment">Versão remota dos repositórios locais</p>
+                        <p class="fragment">Compartilhado com os membros do projeto</p>
+                    </section>
+                    <section style="position: relative;">
+                        <img src="img/work-flow.png" height="500px" alt="fluxo de trabalho no git">
+                    </section>
+                    <section>
+                        <h4>Working directory => Staging area</h4>
+                        <br>
+                        <code>git add <i>caminho/do/arquivo</i></code>
+                        <p>Salva um arquivo adicionado ou alterado</p>
+                        <br>
+                        <code>git rm <i>caminho/do/arquivo</i></code>
+                        <p>Salva um arquivo removido</p>
+                    </section>
+                    <section>
+                        <h4>Working directory => Staging area</h4>
+                        <code>git add .</code>
+                        <p>Salva todos os arquivos adicionados ou alterados</p>
+                        <code>git rm .</code>
+                        <p>Salva todos os arquivos removios</p>
+                        <code>git add -A</code>
+                        <p>Salva tudo</p>
+                    </section>
+                    <section>
+                        <h4>Staging area => local repository</h4>
+                        <code>git commit</code>
+                        <p>Cria uma versão do trabalho com as alterações salvas na área de praparação</p>
+                        <p>Gera uma hash para referenciar a head do repositório</p>
+                        <p>Possui cabeçalho e corpo</p>
                     </section>
                 </section>
 
