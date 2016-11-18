@@ -36,9 +36,7 @@
         <![endif]-->
     </head>
     <body>
-
         <div class="reveal">
-
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
@@ -98,22 +96,22 @@
                 <section>
                     <h2>Fluxo básico</h2>
                     <section>
-                        <h3>Diretório de trabalho (working directory)</h3>
+                        <h3>Diretório de trabalho<br>(working directory)</h3>
                         <p class="fragment">Snapshot dos arquivos atuais</p>
                         <p class="fragment">Identifica os arquivos incluídos, modificados ou excluídos</p>
                     </section>
                     <section>
-                        <h3>Área de preparação (staging area)</h3>
+                        <h3>Área de preparação<br>(staging area)</h3>
                         <p class="fragment">Armazena as alterações realizadas</p>
                         <p class="fragment">Prepara os arquivos para serem commitados</p>
                     </section>
                     <section>
-                        <h3>Repositório local (local repository)</h3>
+                        <h3>Repositório local<br>(local repository)</h3>
                         <p class="fragment">Versão local do último commit</p>
                         <p class="fragment">Gravação das alterações armazenadas na máquina local</p>
                     </section>
                     <section>
-                        <h3>Repositório remoto (remote repository)</h3>
+                        <h3>Repositório remoto<br>(remote repository)</h3>
                         <p class="fragment">Versão remota dos repositórios locais</p>
                         <p class="fragment">Compartilhado com os membros do projeto</p>
                     </section>
@@ -123,67 +121,68 @@
                     <section>
                         <h4>Working directory => Staging area</h4>
                         <br>
-                        <code>git add <i>caminho/do/arquivo</i></code>
-                        <p>Salva um arquivo adicionado ou alterado</p>
+                        <code class="fragment">git add <i>caminho/do/arquivo</i></code>
+                        <p class="fragment">Salva um arquivo adicionado ou alterado</p>
                         <br>
-                        <code>git rm <i>caminho/do/arquivo</i></code>
-                        <p>Salva um arquivo removido</p>
+                        <code class="fragment">git rm <i>caminho/do/arquivo</i></code>
+                        <p class="fragment">Salva um arquivo removido</p>
                     </section>
                     <section>
                         <h4>Working directory => Staging area</h4>
-                        <code>git add .</code>
-                        <p>Salva todos os arquivos adicionados ou alterados</p>
-                        <code>git rm .</code>
-                        <p>Salva todos os arquivos removios</p>
-                        <code>git add -A</code>
-                        <p>Salva tudo</p>
+                        <code class="fragment">git add .</code>
+                        <p class="fragment">Salva todos os arquivos adicionados ou alterados</p>
+                        <code class="fragment">git rm .</code>
+                        <p class="fragment">Salva todos os arquivos removios</p>
+                        <code class="fragment">git add -A</code>
+                        <p class="fragment">Salva tudo</p>
                     </section>
                     <section>
                         <h4>Staging area => Local repository</h4>
-                        <code>git commit</code>
-                        <p>Cria uma versão do trabalho com as alterações salvas na área de praparação</p>
-                        <p>Gera uma hash para referenciar a head do repositório</p>
-                        <p>Possui cabeçalho para resumir o que foi feito em até 50 caracteres, e corpo para dar mais detalhes sobre o que foi citado no cabeçalho</p>
+                        <code class="fragment">git commit</code>
+                        <p class="fragment">Cria uma versão do trabalho com as alterações salvas na área de praparação</p>
+                        <p class="fragment">Gera uma hash para referenciar a HEAD da branch</p>
+                        <p class="fragment">Possui cabeçalho para resumir o que foi feito em até 50 caracteres, e corpo para dar mais detalhes sobre o que foi citado no cabeçalho</p>
                     </section>
                     <section style="position: relative;">
-                        <img src="img/commit.png" alt="tela de commit">
+                        <img src="img/commit.png" height="500" alt="tela de commit">
                     </section>
                     <section>
                         <h4>Staging area => Local repository</h4>
-                        <code>git commit -m "Cabecalho do commit"</code>
-                        <p>Permite criar um commit sem abrir o prompt, digitando somente o cabeçalho na mesma linha</p>
-                        <code>git commit -a</code>
-                        <p>Salva automaticamente os arquivos alterados e deletados, mas não os adicionados</p>
+                        <code class="fragment">git commit -m "Cabecalho do commit"</code>
+                        <p class="fragment">Permite criar um commit sem abrir o prompt, digitando somente o cabeçalho na mesma linha</p>
+                        <code class="fragment">git commit -a</code>
+                        <p class="fragment">Salva automaticamente os arquivos alterados e deletados, mas não os adicionados</p>
                     </section>
                     <section>
                         <h4>Local repository => Remote repository</h4>
-                        <code>git push</code>
-                        <p>Envia os commits da branch local ativa para a branch remota padrão definida</p>
+                        <code class="fragment">git push</code>
+                        <p class="fragment">Envia os commits da branch local ativa para a branch remota padrão definida</p>
                     </section>
                     <section>
                         <h4>Local repository => Remote repository</h4>
-                        <code>git push <i>repository</i> <i>branch</i></code>
-                        <p>Envia os commits da branch local ativa para a branch remota especificada</p>
+                        <code class="fragment">git push <i>repository</i> <i>branch</i></code>
+                        <p class="fragment">Envia os commits da branch local ativa para a branch remota especificada</p>
                     </section>
                     <section>
                         <h4>Local repository => Remote repository</h4>
                         <i>repository</i>
                         <br><br>
-                        <li>Nome do repositório remoto definido.<br>Ex: <code>git push origin <i>branch</i></code></li>
+                        <li class="fragment">Nome do repositório remoto definido.<br>Ex: <code>git push origin <i>branch</i></code></li>
                         <br>
-                        <li>Caminho do repositório remoto definido.<br>Ex: <code>git push <i>http://caminhodorepositorio.git</i> <i>branch</i></code></li>
+                        <li class="fragment">Caminho do repositório remoto definido.<br>Ex: <code>git push <i>http://caminhodorepositorio.git</i> <i>branch</i></code></li>
                     </section>
                     <section>
                         <h4>Remote repository => Local repository</h4>
-                        <code>git fetch</code>
-                        <p>Baixa os commits da branch remota padrão para a branch local ativa</p>
+                        <code class="fragment">git fetch</code>
+                        <p class="fragment">Atualiza as referências das branches locais em relação às remotas</p>
                     </section>
                     <section>
                         <h4>Remote repository => Local repository</h4>
-                        <code>git pull</code>
-                        <p>Baixa os commits da branch remota padrão para a branch local ativa</p>
-                        <code>git pull <i>repository</i> <i>branch</i></code>
-                        <p>Baixa os commits da branch remota especificada para a branch local ativa</p>
+                        <code class="fragment">git pull</code>
+                        <p class="fragment">Atualiza a referência da branch local ativa em relação à remota padrão e faz a mesclagem automaticamente</p>
+                        <code class="fragment">git pull <i>repository</i> <i>branch</i></code>
+                        <p class="fragment">Atualiza a referência da branch local ativa em relação à remota especificada e faz a mesclagem automaticamente</p>
+                        <p class="fragment">Obs: <code>git pull</code> = <code>git fetch</code> + <code>git merge</code></p>
                     </section>
                 </section>
 
@@ -192,453 +191,57 @@
                     <section>
                         <code>git status</code>
                         <p>Mostra o estado atual dos arquivos da branch, e a situação da branch local em relação à remota</p>
-                        <br>
                         <code>git branch</code>
                         <p>Lista as branches existentes no repositório remoto</p>
-                        <br>
                         <code>git branch <i>nomeDaBranch</i></code>
                         <p>Cria uma nova branch local</p>
                     </section>
                     <section>
                         <code>git checkout <i>nomeDaBranch</i></code>
                         <p>Muda a branch ativa</p>
-                        <br>
                         <code>git checkout -b <i>nomeDaBranch</i></code>
                         <p>Cria uma nova branch local e faz dela a branch ativa automaticamente</p>
-                        <br>
                         <code>git merge <i>nomeDaBranch</i></code>
                         <p>Mescla a branch referida na branch ativa</p>
                     </section>
                     <section>
                         <code>git branch -d <i>nomeDaBranch</i></code>
                         <p>Deleta a branch referida</p>
-                        <br>
                         <code>git reset</code>
                         <p>Desfaz o último commit da branch e retorna as alterações para o estado de não salvas. Pode ser usado o índice do array de commits ou a hash de um commit específico como referência</p>
-                        <br>
                         <code>git commit --amend</code>
-                        <p>Permite alterar informações do último commit</p>
-                    </section>
-                </section>
-
-                <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-                    <img src="img/git.png" alt="git">
-                    <h2>Git</h2>
-                    <p>Controlador de versão distribuido</p>
-                </section>
-
-                <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-                    <h2>Controle de versão distribuído</h2><!--Controle de versão -->
-                    <img src="img/version-control-3.png" height="240" width="337" alt="controle de versão">
-                </section>
-
-                <section data-markdown contenteditable>
-                        ## Inicializando o git
-
-                        Inicialize seu projeto
-                        ```
-                        $ mkdir choose-your-adventure
-                        $ cd choose-your-adventure
-                        $ git init
-                        ```
-                        Configure o seu usuário do git
-                        ```
-                        $ git config user.name "John Doe"
-                        $ git config user.email johnd@infojr.com.br
-                        ```
-                </section>
-
-                <section>
-                    <h2>Exercício</h2>
-                    <h3 style="color: #27ae60">Objetivo</h3>
-                    <p>Configurar e inicializar um repositório e adicionar alguns arquivos</p>
-                    <h3 style="color: #c0392b">Método</h3>
-                    <p>Iniciar um repositório</p>
-                    <p>Configurar seu usuário</p>
-                    <p>Escrever um arquivo adventure.md</p>
-                </section>
-
-                <section data-background="img/flow.gif">
-                    <h2>Fluxo Git</h2>
-                </section>
-
-                <section>
-                    <img src="img/work-flow.png" height="605" width="738" alt="fluxo de trabalho no git">
-                </section>
-
-                <section data-background="img/fotografia.jpg">
-                    <h2>A analogia da fotografia</h2>
-                    <code>
-                        <h4 class="fragment">Arquivo = Modelo</h4>
-                        <h4 class="fragment">Git add = posicionar o modelo (arquivo) no palco (staging area)</h4>
-                        <h4 class="fragment">Git commit = Tirar foto</h4>
-                    </code>
-                </section>
-
-                <section data-background="#007777">
-                    <h2>Git Status</h2>
-                    <p>Certifica o status corrente do diretório</p>
-                    <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-$git status
-# On branch master
-#
-# Initial commit
-# Untracked files:(use "git add <!--file-->..." to include in what will be committed)
-#
-# adventure.md
-                    </code></pre>
-                </section>
-                <section>
-                    <h2>Adicionando ao palco</h2>
-                    <p>Devemos começar a rastrear as mudanças</p>
-                    <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-$git add adventure.md
-$git status
-# On branch master
-#
-# Initial commit
-# Changes to be commited:
-#    (use "git rm --cached <"file">..." to unstage)
-#
-#   new file: adventure.md
-                    </code></pre>
-                </section>
-                <section>
-                    <h2>Armazenando uma foto</h2>
-                    <p>Guardando uma foto no repositório local</p>
-                    <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-$git commit -m "Initial commit"
-$git status
-# On branch master
-nothing to commit (working directory clean)
-                    </code></pre>
-                </section>
-
-                <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-                    <h2>Exercício</h2>
-                    <h3 style="color: #27ae60">Objetivo</h3>
-                    <p>Armazenar os arquivos no repositório local através dos commits</p>
-                    <h3 style="color: #c0392b">Método</h3>
-                    <p>Adicionar arquivos para a staging area (dica: git add);</p>
-                    <p>Salvar alterações no repositório local (dica: git commit);</p>
-                    <p>Criar uma cena e mais 3 cenas que possam ser desencadeadas pela primeira (dungeons);</p>
-                    <p>Realizar mesmo processo para salvar alterações no repositório local;</p>
-                    <p>Bônus: Adicionar css à página.</p>
-                </section>
-
-                <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-                    <h2>Histórico</h2>
-                    <p>É possível ver quais alterações feitas</p>
-                    <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-$ git log
-commit  19dd00d4913497107ef6de07e0ee00a9b9315304
-Author: John Doe   <"johnd@infojr.com.br">
-Date:           Sun Oct 12  02:51:03    2014    -0300
-                Creating    index   and modifying README.md
-commit  a44995e61542e54aa88e55908cf09133578a43f6
-Author: John Doe    <"johnd@infojr.com.br">
-Date:           Sun Oct 12  02:37:13    2014    -0300
-                Initial commit
-                    </code></pre>
-                </section>
-
-                <section>
-                    <h2>Diferenças entre commits</h2>
-                    <p>Podemos ver o que modificamos em relação ao repositório local</p>
-                    <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-$   git diff
-diff    --git   a/README.md b/README.md
-index   9d1d09d..61f26f8    100644
---- a/README.md
-+++ b/README.md
-@@  -1,2    +1,4    @@
-    Minha aventura
-    ===================
-+
-+Andando pela rua, você vê ao longe um gnomo carregando uma sacola cheia de ouro
-+a) Você segue o gnomo [(vá para 2)](2.md)
-$   git add adventure.md
-$   git diff
-                    </code></pre>
-                </section>
-
-                <section>
-                    <h2>Add acidental</h2>
-                    <p>Como fazer para remover arquivos adicionados acidentalmente?</p>
-                    <pre><code data-trim contenteditable>
-$   git status
-#   On  branch  master
-#   Changes to  be  committed:
-#           (use    "git    reset   HEAD    <file>..."  to  unstage)
-#
-# modified:         adventure.md
-#
-$   git reset   HEAD    adventure.md
-Unstaged    changes after   reset:
-M adventure.md
-                    </code></pre>
-                </section>
-
-                <section>
-                    <h2>Descartando modificações</h2>
-                    <p>E se eu quiser voltar como estava antes?</p>
-                    <pre><code data-trim contenteditable>
-$   git status
-#   On  branch  master
-#   Changes not staged  for commit:
-#           (use    "git    add <file>..."  to  update  what    will    be  committed)
-#           (use    "git    checkout    --  <file>..."  to  discard changes in  working
-directory)
-#
-# modified:         adventure.md
-#
-no  changes added   to  commit  (use    "git    add"    and/or  "git    commit  -a")
-$   git checkout    --  adventure.md
-$   git status
-                    </code></pre>
-                </section>
-
-                <section>
-                    <h2>REFAZENDO COMMITS</h2>
-                    <p>E se eu esqueci de adicionar alguma coisa?</p>
-                    <pre><code data-trim contenteditable>
-$   git reset   --soft  HEAD^
-$   git status
-#   On  branch  master
-#   Changes to  be  committed:
-#           (use    "git    reset   HEAD    <file>..."  to  unstage)
-#
-# modified:         adventure.md
-# new   file:           2.md
-#
-                    </code></pre>
-                </section>
-
-                <section>
-                    <h2>Adicionando a um commit</h2>
-                    <p>E se eu esqueci de adicionar alguma coisa?</p>
-                    <pre><code data-trim contenteditable>
-$   git add dungeon_new.html
-$   git commit  --amend -m  "Adding new option"
-                    </code></pre>
-                    <p>Para que as pessoas peguem as modificações do repositório remoto</p>
-                    <pre><code data-trim contenteditable>
-$   git pull
-                    </code></pre>
-                    <p>Para que as pessoas peguem o repositório remoto</p>
-                    <pre><code data-trim contenteditable>
-$   git clone   https://github.com/<"user">/<"project">.git [<"folder">]
-                    </code></pre>
-                </section>
-
-                <section data-background="img/dogs-sharing.gif">
-                    <h2 class="fragment">Compartilhando repositórios</h2>
-                </section>
-
-                <section>
-                    <img src="img/github-logo.jpg" alt="github">
-                    <h2>Github</h2>
-                </section>
-
-                <section>
-                    <h2>Adicionando servidor remoto</h2>
-                    <p>Precisamos definir quem vai ser o nosso servidor central</p>
-                    <pre><code data-trim contenteditable>
-$   git remote  add origin  https://github.com/<"user">/<"project">.git
-$   git push    -u  origin  master
-                    </code></pre>
-                </section>
-
-                <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-                    <h2>Exercício</h2>
-                    <h3 style="color: #27ae60">Objetivo</h3>
-                    <p>Crie um repositório remoto e colabore com o do colega</p>
-                    <h3 style="color: #c0392b">Método</h3>
-                    <p>Crie o seu repositório no github e envie o seu código (dica: git remote e git push); </p>
-                    <p>Adicione o colega do seu lado como colaborador como colaborador; </p>
-                    <p>Crie uma cópia do repositório do seu colega (dica: git clone); </p>
-                    <p>Sem contar o que está fazendo, faça as alterações que desejar no projeto dele; </p>
-                    <p>Envie as suas alterações para o github (dica: git push); </p>
-                    <p>Volte para o diretório do seu projeto e pegue as alterações feitas pelo seu colega (dica: git pull); </p>
-                    <p>Identifique as alterações feitas sem perguntar para o colega que as modificou.</p>
-                    <aside class="notes">
-                        Add o cara do lado como contribuidor; cada um cria uma branch fazendo a mesma coisa
-                        instruçoes para criar branch no proximos
-                    </aside>
-                </section>
-
-                <section data-background="img/women-colaboration.gif">
-                    <h2 class="fragment">Mais colaboração!</h2>
-
-                </section>
-
-                <section>
-                    <img src="img/branches.png" alt="branches">
-                    <h2>Branches</h2>
-                </section>
-
-                <section>
-                    <p>Criar branch</p>
-                    <pre><code data-trim contenteditable>
-$ git branch aventura
-                    </code></pre>
-                    <p>Acessar branch</p>
-                    <pre><code data-trim contenteditable>
-$ git checkout aventura
-Switched to branch 'aventura'
-                    </code></pre>
-                    <p>Atalho para criar e acessar branch em um só comando</p>
-                    <pre><code data-trim contenteditable>
-$ git checkout -b aventura
-                    </code></pre>
-                    <p>Listar branches</p>
-                    <pre><code data-trim contenteditable>
-$ git branch
- aventura
-* master
-                    </code></pre>
-                </section>
-
-                <section>
-                    <p>Baixar branch</p>
-                    <pre><code data-trim contenteditable>
-git checkout -t origin/<"branch">
-                    </code></pre>
-                </section>
-
-                <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-                    <h2>Exercício</h2>
-                    <h3 style="color: #27ae60">Objetivo</h3>
-                    <p>Crie uma branch e nessa branch crie mais cenas para sua história</p>
-                    <h3 style="color: #c0392b">Método</h3>
-                    <p>Crie uma branch (dica: git branch);</p>
-                    <p>Vá para a branch (dica: git checkout);</p>
-                    <p>Crie um formulário para salvar personagens;</p>
-                    <p>Faça o commit dessa funcionalidade;</p>
-                    <p>Volte para a branch master.</p>
-                    <p>O que foi que aconteceu?</p>
-                    <aside class="notes">
-                        submete apenas o merge da sua branch
-                    </aside>
-                </section>
-
-                <section>
-                    <h2>Merge Branches</h2>
-                    <p>Terminamos de criar as outras cenas da nossa história. É hora de fundir as branches</p>
-                    <pre><code data-trim contenteditable>
-$ git checkout master
-$ git merge char
-Updating c8541d6..a226599
-Fast-forward
- 0 files changed, 0 insertions(+),
-0 deletions(-)
- create mode 100644 chars_new.html
-                    </code></pre>
-                    <p>Remover branch</p>
-                    <pre><code data-trim contenteditable>
-$ git branch -d char
-                    </code></pre>
-                </section>
-
-                <section>
-                    <h2>Resolvendo conflitos</h2>
-                    <p>E quando duas pessoas mechem no mesmo arquivo?</p>
-                    <pre><code data-trim contenteditable>
-$ git push
-! [rejected]        master  ->
-master (non-fast-forward)
-                    </code></pre>
-                    <p><code>IMPORTANTE! REALIZAR GIT PULL ANTES DE GIT PUSH!</code></p>
-                    <aside class="notes">
-                        executa o merge da branch do colega
-
-                    </aside>
-                </section>
-
-                <section>
-                    <section>
-                        <h2>Resolvendo conflitos</h2>
-                        <p>Arquivo com conflito</p>
-                        <pre><code data-trim contenteditable>
-<<<<<<< HEAD
-        <title>DungeonCrawlers Generations</title>
-=======
-        <title>Dungeon  Crawlers</title>
->>>>>>> 7a61a9b596cdd07120e36f4f916ee65036d5c179
-                        </code></pre>
-                    </section>
-                </section>
-                <section data-background="img/conflito-git.jpg">
-                    <section>
-                        <h3>Natureza do Conflito</h2>
-                        <ul class="color-chiaroscuro-blue">
-                            <li class="fragment liista" data-fragment-index="1">
-                                Desatenção ao <code>git fetch</code> <strong class="fragment" data-fragment-index="2">**evitável**</strong>
-                            </li>
-                            <li class="fragment liista" data-fragment-index="3">
-                                Mesmo arquivo modificado em paralelo <strong class="fragment" data-fragment-index="4">**Quase inevitável (necessário)**</strong>
-                            </li>
-                        </ul>
+                        <p>Permite alterar as informações do último commit</p>
                     </section>
                     <section>
-                        <h3>Integrar uma ferramenta ao git</h3>
-                        <ul class="color-chiaroscuro-blue">
-                            <li class="fragment liista" data-fragment-index="1"><b style="color: #FFF;">Meld Merge</b> <img src="img/meld.png" alt="meld-merge" width="50px" height="50px" border="none"></li>
-                                <li class="fragment liista" data-fragment-index="2"><b style="color: #FFF;">Faz essa mágina toda de forma lindamente linda!!</b></li>
-                        </ul>
+                        <code>git log</code>
+                        <p>Mostra o log de commits</p>
+                        <code>git diff</code>
+                        <p>Discrimina as alterações não salvas realizadas nos arquivos</p>
+                        <code>git stash</code>
+                        <p>Salva as alterações realizadas nos arquivos, e retorna a referência da HEAD para o último commit</p>
                     </section>
                     <section>
-                        <img src="img/meld-mary.png" width="700px" height="500px">
+                        <code>git stash pop</code>
+                        <p>Recupera as informações salvas no array de stashes</p>
+                        <code>git checkout <i>caminho/do/arquivo</i></code>
+                        <p>Desfaz as alterações realizadas no arquivo especificado, retornando o mesmo para o estado do último commit</p>
                     </section>
-
-                    <section>
-                        <h4>Instalação</h4>
-                        <pre><code data-trim contenteditable>
-$ apt-get install meld
-                        </code></pre>
-                        <h4>Configuração</h4>
-                        <pre><code data-trim contenteditable>
-$ git config --global merge.tool meld
-$ git config --global diff.guitool meld
-                        </code></pre>
-                        <p class="fragment">Ferramenta para merge e diff</p>
-                    </section>
-                    <section>
-                        <h4>Execução para merge</h4>
-                        <pre><code>
-$ git mergetool
-                        </code></pre>
-                        <h4>Ou para Diff</h4>
-                        <pre><code>
-$ git difftool
-                        </code></pre>
-                    </section>
-
                 </section>
 
                 <section>
-                    <p>Powered By:</p>
-                    <ul>
-                        <li>Rafael Coelho</li>
-                            <ul>
-                                <li>Pós Júnior</li>
-                                <li>Ciência da Computação</li>
-                            </ul>
-                        <li>Marino Hohenheim</li>
-                            <ul>
-                                <li>Gerente de Provisão</li>
-                                <li>Ciência da Computação</li>
-                            </ul>
-                    </ul>
+                    <h3>Resolvendo conflitos</h3>
+                    <code>git pull</code> ou <code>git merge</code>
+                    <p>Correções nos arquivos</p>
+                    <code>git add</code> e/ou <code>git rm</code>
+                    <br>
+                    <code>git commit</code>
+                    <br>
+                    <code>git push</code>
+                    <p>Obs: Pode ser necessário usar <code>git push -f</code> para forçar um push que o git considera como uma alteração diferente do que está na branch remota</p>
                 </section>
 
-                <section data-background="img/the-end.gif">
-                    <aside class="notes">
-                        os cara tem q ter vivência em git conlitos
-                        bota pra forkar o presentation-base e prosseguir
-                    </aside>
-                </section>
-
+                <section data-background="img/the-end.gif"></section>
+            </div>
         </div>
 
         <script src="../vendor/reveal.js/lib/js/head.min.js"></script>
